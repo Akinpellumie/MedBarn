@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:ff1="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             x:Class="MedBarn.Views.LandingPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand">
+            <ff1:SvgCachedImage
+                Source="backgrd.jpg"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Aspect="AspectFill"/>
+            
+            <ff1:SvgCachedImage
+                Source="bgLayer.svg"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Aspect="AspectFill"/>
+
+            <Grid VerticalOptions="EndAndExpand"
+                  HorizontalOptions="FillAndExpand"
+                  Padding="20,0,20,30">
+
+                <Button HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="{StaticResource WhiteColor}"
+                    TextColor="{StaticResource PrimaryColor}"
+                     FontSize="{StaticResource FontSize14}"
+                        Text="Log In"
+                        TextTransform="None"
+                        x:Name="LoginBtn"
+                        Clicked="LoginBtn_Clicked"
+                        Grid.Row="0"
+                        FontFamily="{StaticResource FontSemiBold}"
+                        VerticalOptions="StartAndExpand"/>
+                
+                <Button HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="EndAndExpand"
+                        BackgroundColor="Transparent"
+                        BorderColor="{StaticResource WhiteColor}"
+                        BorderWidth="1"
+                        Grid.Row="1"
+                        TextTransform="None"
+                        TextColor="{StaticResource WhiteColor}"
+                        FontSize="{StaticResource FontSize14}"
+                        Text="Register"
+                        FontFamily="{StaticResource FontSemiBold}"/>
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

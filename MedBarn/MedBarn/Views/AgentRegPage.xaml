@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:templates="clr-namespace:MedBarn.Views.Templates" xmlns:Controls="clr-namespace:MedBarn.Controls" xmlns:ff1="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms" xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="MedBarn.Views.AgentRegPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource WhiteColor}">
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--#region toolbarView-->
+            <Grid Grid.Row="0" HorizontalOptions="Fill">
+            <templates:ToolBarView Title="Create Account" TitleColor="{StaticResource PrimaryColor}"/>
+            </Grid>
+            <!--#endregion-->
+            
+            <!--#region Reg view-->
+            <Grid Grid.Row="1"
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand">
+                
+            <!--#region FirstView-->
+                <StackLayout IsVisible="False">
+                    <Grid HorizontalOptions="FillAndExpand"
+                          VerticalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout Orientation="Horizontal"
+                                     Grid.Row="0"
+                                     VerticalOptions="Start"
+                                     HorizontalOptions="Center">
+                            <BoxView Color="{StaticResource RedShadeColor}"
+                                     HeightRequest="3"
+                                     CornerRadius="5"
+                                     WidthRequest="20"/>
+
+                            <BoxView Color="{StaticResource InActiveColor}"
+                                     HeightRequest="3"
+                                     CornerRadius="5"
+                                     WidthRequest="20"/>
+                        </StackLayout>
+
+
+                        <ScrollView HorizontalOptions="FillAndExpand"
+                                     VerticalOptions="FillAndExpand"
+                                     Orientation="Vertical"
+                                     Margin="20"
+                                     Grid.Row="1">
+                            <StackLayout HorizontalOptions="FillAndExpand"
+                                     VerticalOptions="FillAndExpand"
+                                     Orientation="Vertical"
+                                     Margin="20"
+                                     Grid.Row="1">
+                            <StackLayout Margin="0,0,0,10">
+                                <Label Text="Full Name"
+                                   TextColor="{StaticResource TextColor}"
+                                   FontFamily="{StaticResource FontSemiBold}"
+                                   FontSize="{StaticResource FontSize16}"/>
+                                <pv:PancakeView BackgroundColor="{StaticResource EntryBgColor}"
+                                            Margin="0,0,0,10"
+                                            x:Name="nameIdFrame"
+                                            HorizontalOptions="Fill"
+                                            HeightRequest="45">
+
+                                    <Controls:CustomEntry  x:Name="name"
+                                                           Grid.Column="1" 
+                                                           PlaceholderColor="{StaticResource PlaceholderColor}" 
+                                                           TextColor="{StaticResource TextColor}" 
+                                                           Placeholder="Full Name" 
+                                                           Text="{Binding Username, Mode=TwoWay}"
+                                                           FontSize="{StaticResource FontSize16}"
+                                                           Margin="10,0,0,0"
+                                                           Keyboard="Default"
+                                                           FontFamily="{StaticResource FontMedium}"/>
+                                </pv:PancakeView>
+                            </StackLayout>
+
+                            <StackLayout Margin="0,0,0,10">
+                                <Label Text="Username"
+                                   TextColor="{StaticResource TextColor}"
+                                   FontFamily="{StaticResource FontSemiBold}"
+                                   FontSize="{StaticResource FontSize16}"/>
+                                <pv:PancakeView BackgroundColor="{StaticResource EntryBgColor}"
+                                            Margin="0,0,0,10"
+                                            x:Name="userIdFrame"
+                                            HorizontalOptions="Fill"
+                                            HeightRequest="45">
+
+                                    <Controls:CustomEntry  x:Name="usrNme"
+                                                           Grid.Column="1" 
+                                                           PlaceholderColor="{StaticResource PlaceholderColor}" 
+                                                           TextColor="{StaticResource TextColor}" 
+                                                           Placeholder="Username" 
+                                                           Text="{Binding Username, Mode=TwoWay}"
+                                                           FontSize="{StaticResource FontSize16}"
+                                                           Margin="10,0,0,0"
+                                                           Keyboard="Default"
+                                                           FontFamily="{StaticResource FontMedium}"/>
+                                </pv:PancakeView>
+                            </StackLayout>
+
+                            <StackLayout Margin="0,0,0,10">
+                                <Label Text="Email"
+                                   TextColor="{StaticResource TextColor}"
+                                   FontFamily="{StaticResource FontSemiBold}"
+                                   FontSize="{StaticResource FontSize16}"/>
+                                <pv:PancakeView BackgroundColor="{StaticResource EntryBgColor}"
+                                            Margin="0,0,0,10"
+                                            x:Name="emailIdFrame"
+                                            HorizontalOptions="Fill"
+                                            HeightRequest="45">
+
+                                    <Controls:CustomEntry  x:Name="email"
+                                                           Grid.Column="1" 
+                                                           PlaceholderColor="{StaticResource PlaceholderColor}" 
+                                                           TextColor="{StaticResource TextColor}" 
+                                                           Placeholder="Email" 
+                                                           Text="{Binding Username, Mode=TwoWay}"
+                                                           FontSize="{StaticResource FontSize16}"
+                                                           Margin="10,0,0,0"
+                                                           Keyboard="Email"
+                                                           FontFamily="{StaticResource FontMedium}"/>
+                                </pv:PancakeView>
+                            </StackLayout>
+
+                            <StackLayout Margin="0,0,0,10">
+                                <Label Text="Gender"
+                                   TextColor="{StaticResource TextColor}"
+                                   FontFamily="{StaticResource FontSemiBold}"
+                                   FontSize="{StaticResource FontSize16}"/>
+                                <pv:PancakeView BackgroundColor="{StaticResource EntryBgColor}"
+                                            Margin="0,0,0,10"
+                                            x:Name="genderFrame"
+                                            HorizontalOptions="Fill"
+                                            HeightRequest="45">
+
+                                    <Controls:CustomPicker  x:Name="gender"
+                                                           Grid.Column="1" 
+                                                           TitleColor="{StaticResource PlaceholderColor}" 
+                                                           TextColor="{StaticResource TextColor}" 
+                                                           Title="Select gender"
+                                                           FontSize="{StaticResource FontSize16}"
+                                                           Margin="10,0,0,0"
+                                                            Image="ic_arrow_drop_down"
+                                                           FontFamily="{StaticResource FontMedium}">
+                                        <Controls:CustomPicker.Items>
+                                            <x:String>Male</x:String>
+                                            <x:String>Female</x:String>
+                                        </Controls:CustomPicker.Items>
+                                    </Controls:CustomPicker>
+                                </pv:PancakeView>
+                            </StackLayout>
+                        </StackLayout>
+                        </ScrollView>
+                        <Grid HorizontalOptions="End"
+                              Margin="0,0,20,20"
+                              Grid.Row="2"
+                              VerticalOptions="End">
+                            <Button Text="Continue"
+                                    WidthRequest="150"
+                                    BackgroundColor="{StaticResource PrimaryColor}"
+                                    TextColor="{StaticResource WhiteColor}"
+                                    FontSize="{StaticResource FontSize16}"
+                                    FontFamily="{StaticResource FontSemiBold}"/>
+                        </Grid>
+                    </Grid>
+                </StackLayout>
+            <!--#endregion first view-->
+                
+                <!--#region SecondView-->
+                <StackLayout IsVisible="True">
+                    <Grid HorizontalOptions="FillAndExpand"
+                          VerticalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout Orientation="Horizontal"
+                                     Grid.Row="0"
+                                     VerticalOptions="Start"
+                                     HorizontalOptions="Center">
+                            <BoxView Color="{StaticResource InActiveColor}"
+                                     HeightRequest="3"
+                                     CornerRadius="5"
+                                     WidthRequest="20"/>
+
+                            <BoxView Color="{StaticResource RedShadeColor}"
+                                     HeightRequest="3"
+                                     CornerRadius="5"
+                                     WidthRequest="20"/>
+                        </StackLayout>
+
+                        <ScrollView Grid.Row="1" VerticalScrollBarVisibility="Never"
+                                    Orientation="Vertical">
+                        <StackLayout HorizontalOptions="FillAndExpand"
+                                     VerticalOptions="FillAndExpand"
+                                     Orientation="Vertical"
+                                     Margin="20"
+                                     Grid.Row="1">
+                                <StackLayout Margin="0,0,0,10">
+                                    <Label Text="Facebook handle"
+                                   TextColor="{StaticResource TextColor}"
+                                   FontFamily="{StaticResource FontSemiBold}"
+                                   FontSize="{StaticResource FontSize16}"/>
+                                    <pv:PancakeView BackgroundColor="{StaticResource EntryBgColor}"
+                                            Margin="0,0,0,10"
+                                            x:Name="fbkFrame"
+                                            HorizontalOptions="Fill"
+                                            HeightRequest="45">
+
+                                        <Controls:CustomEntry  x:Name="facebook"
+                                                           Grid.Column="1" 
+                                                           PlaceholderColor="{StaticResource PlaceholderColor}" 
+                                                           TextColor="{StaticResource TextColor}" 
+                                                           Placeholder="@username" 
+                                                           Text="{Binding Username, Mode=TwoWay}"
+                                                           FontSize="{StaticResource FontSize16}"
+                                                           Margin="10,0,0,0"
+                                                           Keyboard="Default"
+                                                           FontFamily="{StaticResource FontMedium}"/>
+                                    </pv:PancakeView>
+                                </StackLayout>
+                            
+                            <StackLayout Margin="0,0,0,10">
+                                    <Label Text="Twitter handle"
+                                   TextColor="{StaticResource TextColor}"
+                                   FontFamily="{StaticResource FontSemiBold}"
+                                   FontSize="{StaticResource FontSize16}"/>
+                                    <pv:PancakeView BackgroundColor="{StaticResource EntryBgColor}"
+                                            Margin="0,0,0,10"
+                                            x:Name="twtFrame"
+                                            HorizontalOptions="Fill"
+                                            HeightRequest="45">
+
+                                        <Controls:CustomEntry  x:Name="twitter"
+                                                           Grid.Column="1" 
+                                                           PlaceholderColor="{StaticResource PlaceholderColor}" 
+                                                           TextColor="{StaticResource TextColor}" 
+                                                           Placeholder="@username" 
+                                                           Text="{Binding Username, Mode=TwoWay}"
+                                                           FontSize="{StaticResource FontSize16}"
+                                                           Margin="10,0,0,0"
+                                                           Keyboard="Default"
+                                                           FontFamily="{StaticResource FontMedium}"/>
+                                    </pv:PancakeView>
+                                </StackLayout>
+                            
+                            <StackLayout Margin="0,0,0,10">
+                                    <Label Text="Instagram handle"
+                                   TextColor="{StaticResource TextColor}"
+                                   FontFamily="{StaticResource FontSemiBold}"
+                                   FontSize="{StaticResource FontSize16}"/>
+                                    <pv:PancakeView BackgroundColor="{StaticResource EntryBgColor}"
+                                            Margin="0,0,0,10"
+                                            x:Name="instFrame"
+                                            HorizontalOptions="Fill"
+                                            HeightRequest="45">
+
+                                        <Controls:CustomEntry  x:Name="insta"
+                                                           Grid.Column="1" 
+                                                           PlaceholderColor="{StaticResource PlaceholderColor}" 
+                                                           TextColor="{StaticResource TextColor}" 
+                                                           Placeholder="@username" 
+                                                           Text="{Binding Username, Mode=TwoWay}"
+                                                           FontSize="{StaticResource FontSize16}"
+                                                           Margin="10,0,0,0"
+                                                           Keyboard="Default"
+                                                           FontFamily="{StaticResource FontMedium}"/>
+                                    </pv:PancakeView>
+                                </StackLayout>
+                            
+                            <StackLayout Margin="0,0,0,10">
+                                    <Label Text="Password"
+                                   TextColor="{StaticResource TextColor}"
+                                   FontFamily="{StaticResource FontSemiBold}"
+                                   FontSize="{StaticResource FontSize16}"/>
+                                    <pv:PancakeView BackgroundColor="{StaticResource EntryBgColor}"
+                                            Margin="0,0,0,10"
+                                            x:Name="keyFrame"
+                                            HorizontalOptions="Fill"
+                                            HeightRequest="45">
+
+                                        <Controls:CustomEntry  x:Name="pass"
+                                                           Grid.Column="1" 
+                                                           PlaceholderColor="{StaticResource PlaceholderColor}" 
+                                                           TextColor="{StaticResource TextColor}" 
+                                                           Placeholder="password" 
+                                                           Text="{Binding Username, Mode=TwoWay}"
+                                                           FontSize="{StaticResource FontSize16}"
+                                                           Margin="10,0,0,0"
+                                                           Keyboard="Default"
+                                                           FontFamily="{StaticResource FontMedium}">
+                                            <Controls:CustomEntry.Effects>
+                                                <Controls:ShowHidePassEffect />
+                                            </Controls:CustomEntry.Effects>
+                                        </Controls:CustomEntry>
+                                    </pv:PancakeView>
+                                </StackLayout>
+                            
+                            <StackLayout Margin="0,0,0,10">
+                                    <Label Text="Confirm Password"
+                                   TextColor="{StaticResource TextColor}"
+                                   FontFamily="{StaticResource FontSemiBold}"
+                                   FontSize="{StaticResource FontSize16}"/>
+                                    <pv:PancakeView BackgroundColor="{StaticResource EntryBgColor}"
+                                            Margin="0,0,0,10"
+                                            x:Name="conkeyFrame"
+                                            HorizontalOptions="Fill"
+                                            HeightRequest="45">
+
+                                        <Controls:CustomEntry  x:Name="ConPass"
+                                                           Grid.Column="1" 
+                                                           PlaceholderColor="{StaticResource PlaceholderColor}" 
+                                                           TextColor="{StaticResource TextColor}" 
+                                                           Placeholder="confirm password" 
+                                                           Text="{Binding Username, Mode=TwoWay}"
+                                                           FontSize="{StaticResource FontSize16}"
+                                                           Margin="10,0,0,0"
+                                                           Keyboard="Default"
+                                                           FontFamily="{StaticResource FontMedium}">
+                                            <Controls:CustomEntry.Effects>
+                                                <Controls:ShowHidePassEffect />
+                                            </Controls:CustomEntry.Effects>
+                                        </Controls:CustomEntry>
+                                    </pv:PancakeView>
+                                </StackLayout>
+
+                                <StackLayout x:Name="terms" 
+                                             Margin="0,0,0,10"
+                                             Orientation="Horizontal">
+                                    <CheckBox IsChecked="False"
+                                              x:Name="check"
+                                              Color="{StaticResource PrimaryColor}"
+                                              BackgroundColor="Transparent"/>
+
+                                    <Label LineBreakMode="WordWrap" VerticalOptions="Center">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="I agree with the " 
+                                                      TextColor="{StaticResource PrimaryColor}"
+                                                      FontFamily="{StaticResource FontRegular}"
+                                                      FontSize="{StaticResource FontSize14}"/>
+                                                <Span Text="Terms and condition "
+                                                      TextColor="{StaticResource RedShadeColor}"
+                                                      FontFamily="{StaticResource FontBold}"
+                                                      FontSize="{StaticResource FontSize14}"/>
+                                                <Span Text="and the " 
+                                                      TextColor="{StaticResource PrimaryColor}"
+                                                      FontFamily="{StaticResource FontRegular}"
+                                                      FontSize="{StaticResource FontSize14}"/>
+                                                <Span Text="Privacy Policy."
+                                                      TextColor="{StaticResource RedShadeColor}"
+                                                      FontFamily="{StaticResource FontBold}"
+                                                      FontSize="{StaticResource FontSize14}"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </ScrollView>
+                        <Grid HorizontalOptions="FillAndExpand"
+                              Margin="20"
+                              Grid.Row="2"
+                              VerticalOptions="End">
+                            <Button Text="Continue"
+                                    HorizontalOptions="FillAndExpand"
+                                    BackgroundColor="{StaticResource PrimaryColor}"
+                                    TextColor="{StaticResource WhiteColor}"
+                                    FontSize="{StaticResource FontSize16}"
+                                    FontFamily="{StaticResource FontSemiBold}"/>
+                        </Grid>
+                    </Grid>
+                </StackLayout>
+            <!--#endregion second view-->
+
+
+            </Grid>
+            <!--#endregion Reg view-->
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

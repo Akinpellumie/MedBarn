@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:MedBarn.Controls" xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:templates="clr-namespace:MedBarn.Views.Templates"
+             x:Class="MedBarn.Views.DonorRegPage"
+             BackgroundColor="{StaticResource WhiteColor}"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--#region toolbarView-->
+            <Grid Grid.Row="0" HorizontalOptions="Fill">
+                <templates:ToolBarView Title="Create Account" TitleColor="{StaticResource PrimaryColor}"/>
+            </Grid>
+            <!--#endregion-->
+
+            <!--#region Reg view-->
+            <Grid Grid.Row="1"
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand">
+
+                <!--#region FirstView-->
+                
+                <StackLayout IsVisible="False">
+                    <Grid HorizontalOptions="FillAndExpand"
+                          VerticalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout Orientation="Horizontal"
+                                     Grid.Row="0"
+                                     VerticalOptions="Start"
+                                     HorizontalOptions="Center">
+                            <BoxView Color="{StaticResource RedShadeColor}"
+                                     HeightRequest="3"
+                                     CornerRadius="5"
+                                     WidthRequest="20"/>
+
+                            <BoxView Color="{StaticResource InActiveColor}"
+                                     HeightRequest="3"
+                                     CornerRadius="5"
+                                     WidthRequest="20"/>
+                            
+                            <BoxView Color="{StaticResource InActiveColor}"
+                                     HeightRequest="3"
+                                     CornerRadius="5"
+                                     WidthRequest="20"/>
+                            
+                            <BoxView Color="{StaticResource InActiveColor}"
+                                     HeightRequest="3"
+                                     CornerRadius="5"
+                                     WidthRequest="20"/>
+                            
+                            <BoxView Color="{StaticResource InActiveColor}"
+                                     HeightRequest="3"
+                                     CornerRadius="5"
+                                     WidthRequest="20"/>
+                            
+                            <BoxView Color="{StaticResource InActiveColor}"
+                                     HeightRequest="3"
+                                     CornerRadius="5"
+                                     WidthRequest="20"/>
+                            
+                            <BoxView Color="{StaticResource InActiveColor}"
+                                     HeightRequest="3"
+                                     CornerRadius="5"
+                                     WidthRequest="20"/>
+                        </StackLayout>
+
+                        <ScrollView HorizontalOptions="FillAndExpand"
+                                    VerticalScrollBarVisibility="Never"
+                                    Grid.Row="1"
+                                    VerticalOptions="FillAndExpand">
+                            
+                        <StackLayout HorizontalOptions="FillAndExpand"
+                                     VerticalOptions="FillAndExpand"
+                                     Orientation="Vertical"
+                                     Margin="20"
+                                     Grid.Row="1">
+                            <StackLayout Margin="0,0,0,10">
+                                <Label Text="Agent Referral Code"
+                                   TextColor="{StaticResource TextColor}"
+                                   FontFamily="{StaticResource FontSemiBold}"
+                                   FontSize="{StaticResource FontSize16}"/>
+                                <pv:PancakeView BackgroundColor="{StaticResource EntryBgColor}"
+                                            Margin="0,0,0,10"
+                                            x:Name="refFrame"
+                                            HorizontalOptions="Fill"
+                                            HeightRequest="45">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Controls:CustomEntry  x:Name="ref"
+                                                           Grid.Column="0" 
+                                                           PlaceholderColor="{StaticResource PlaceholderColor}" 
+                                                           TextColor="{StaticResource TextColor}" 
+                                                           Placeholder="Agent Referral Code" 
+                                                           Text="{Binding Username, Mode=TwoWay}"
+                                                           FontSize="{StaticResource FontSize16}"
+                                                           Margin="10,0,0,0"
+                                                           Keyboard="Default"
+                                                           FontFamily="{StaticResource FontMedium}"/>
+
+                                        <Image Source="check.png"
+                                               HeightRequest="20"
+                                               WidthRequest="20"
+                                               BackgroundColor="Transparent"
+                                               Grid.Column="1"
+                                               VerticalOptions="Center"
+                                               HorizontalOptions="Center"
+                                               Margin="0,0,10,0"/>
+                                    </Grid>
+                                </pv:PancakeView>
+                            </StackLayout>
+                            
+                            <StackLayout Margin="0,0,0,10">
+                                <Label Text="Phone Number"
+                                   TextColor="{StaticResource TextColor}"
+                                   FontFamily="{StaticResource FontSemiBold}"
+                                   FontSize="{StaticResource FontSize16}"/>
+                                <pv:PancakeView BackgroundColor="{StaticResource EntryBgColor}"
+                                            Margin="0,0,0,10"
+                                            x:Name="phoneFrame"
+                                            HorizontalOptions="Fill"
+                                            HeightRequest="45">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Controls:CustomEntry  x:Name="phne"
+                                                           Grid.Column="0" 
+                                                           PlaceholderColor="{StaticResource PlaceholderColor}" 
+                                                           TextColor="{StaticResource TextColor}" 
+                                                           Placeholder="234803213451767" 
+                                                           Text="{Binding Username, Mode=TwoWay}"
+                                                           FontSize="{StaticResource FontSize16}"
+                                                           Margin="10,0,0,0"
+                                                           Keyboard="Numeric"
+                                                           FontFamily="{StaticResource FontMedium}"/>
+                                    </Grid>
+                                </pv:PancakeView>
+                            </StackLayout>
+
+                            <StackLayout Margin="0,0,0,10">
+                                <Label Text="Full Name"
+                                   TextColor="{StaticResource TextColor}"
+                                   FontFamily="{StaticResource FontSemiBold}"
+                                   FontSize="{StaticResource FontSize16}"/>
+                                <pv:PancakeView BackgroundColor="{StaticResource EntryBgColor}"
+                                            Margin="0,0,0,10"
+                                            x:Name="nameFrame"
+                                            HorizontalOptions="Fill"
+                                            HeightRequest="45">
+
+                                    <Controls:CustomEntry  x:Name="name"
+                                                           Grid.Column="1" 
+                                                           PlaceholderColor="{StaticResource PlaceholderColor}" 
+                                                           TextColor="{StaticResource TextColor}" 
+                                                           Placeholder="Full Name" 
+                                                           Text="{Binding Username, Mode=TwoWay}"
+                                                           FontSize="{StaticResource FontSize16}"
+                                                           Margin="10,0,0,0"
+                                                           Keyboard="Default"
+                                                           FontFamily="{StaticResource FontMedium}"/>
+                                </pv:PancakeView>
+                            </StackLayout>
+                            
+                            <StackLayout Margin="0,0,0,10">
+                                <Label Text="Username"
+                                   TextColor="{StaticResource TextColor}"
+                                   FontFamily="{StaticResource FontSemiBold}"
+                                   FontSize="{StaticResource FontSize16}"/>
+                                <pv:PancakeView BackgroundColor="{StaticResource EntryBgColor}"
+                                            Margin="0,0,0,10"
+                                            x:Name="userIdFrame"
+                                            HorizontalOptions="Fill"
+                                            HeightRequest="45">
+
+                                    <Controls:CustomEntry  x:Name="usrNme"
+                                                           Grid.Column="1" 
+                                                           PlaceholderColor="{StaticResource PlaceholderColor}" 
+                                                           TextColor="{StaticResource TextColor}" 
+                                                           Placeholder="Username" 
+                                                           Text="{Binding Username, Mode=TwoWay}"
+                                                           FontSize="{StaticResource FontSize16}"
+                                                           Margin="10,0,0,0"
+                                                           Keyboard="Default"
+                                                           FontFamily="{StaticResource FontMedium}"/>
+                                </pv:PancakeView>
+                            </StackLayout>
+
+                                <StackLayout Margin="0,0,0,10">
+                                    <Label Text="Email"
+                                   TextColor="{StaticResource TextColor}"
+                                   FontFamily="{StaticResource FontSemiBold}"
+                                   FontSize="{StaticResource FontSize16}"/>
+                                    <pv:PancakeView BackgroundColor="{StaticResource EntryBgColor}"
+                                            Margin="0,0,0,10"
+                                            x:Name="emailIdFrame"
+                                            HorizontalOptions="Fill"
+                                            HeightRequest="45">
+
+                                        <Controls:CustomEntry  x:Name="email"
+                                                           Grid.Column="1" 
+                                                           PlaceholderColor="{StaticResource PlaceholderColor}" 
+                                                           TextColor="{StaticResource TextColor}" 
+                                                           Placeholder="Email" 
+                                                           Text="{Binding Username, Mode=TwoWay}"
+                                                           FontSize="{StaticResource FontSize16}"
+                                                           Margin="10,0,0,0"
+                                                           Keyboard="Email"
+                                                           FontFamily="{StaticResource FontMedium}"/>
+                                    </pv:PancakeView>
+                                </StackLayout>
+                            </StackLayout>
+
+                        </ScrollView>
+                        <Grid HorizontalOptions="End"
+                              Margin="0,0,20,20"
+                              Grid.Row="2"
+                              VerticalOptions="End">
+                            <Button Text="Continue"
+                                    WidthRequest="150"
+                                    BackgroundColor="{StaticResource PrimaryColor}"
+                                    TextColor="{StaticResource WhiteColor}"
+                                    FontSize="{StaticResource FontSize16}"
+                                    FontFamily="{StaticResource FontSemiBold}"/>
+                        </Grid>
+                    </Grid>
+                </StackLayout>
+                <!--#endregion first view-->
+
+                <!--#region SevenView-->
+                <StackLayout IsVisible="True">
+                    <Grid HorizontalOptions="FillAndExpand"
+                          VerticalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout Orientation="Horizontal"
+                                     Grid.Row="0"
+                                     VerticalOptions="Start"
+                                     HorizontalOptions="Center">
+                            <BoxView Color="{StaticResource InActiveColor}"
+                                     HeightRequest="3"
+                                     CornerRadius="5"
+                                     WidthRequest="20"/>
+
+                            <BoxView Color="{StaticResource RedShadeColor}"
+                                     HeightRequest="3"
+                                     CornerRadius="5"
+                                     WidthRequest="20"/>
+
+                            <BoxView Color="{StaticResource InActiveColor}"
+                                     HeightRequest="3"
+                                     CornerRadius="5"
+                                     WidthRequest="20"/>
+                            
+                            <BoxView Color="{StaticResource InActiveColor}"
+                                     HeightRequest="3"
+                                     CornerRadius="5"
+                                     WidthRequest="20"/>
+                            
+                            <BoxView Color="{StaticResource InActiveColor}"
+                                     HeightRequest="3"
+                                     CornerRadius="5"
+                                     WidthRequest="20"/>
+
+                            <BoxView Color="{StaticResource InActiveColor}"
+                                     HeightRequest="3"
+                                     CornerRadius="5"
+                                     WidthRequest="20"/>
+
+                            <BoxView Color="{StaticResource InActiveColor}"
+                                     HeightRequest="3"
+                                     CornerRadius="5"
+                                     WidthRequest="20"/>
+                        </StackLayout>
+
+                        <ScrollView Grid.Row="1" VerticalScrollBarVisibility="Never"
+                                    Orientation="Vertical">
+                            <StackLayout HorizontalOptions="FillAndExpand"
+                                     VerticalOptions="FillAndExpand"
+                                     Orientation="Vertical"
+                                     Margin="20"
+                                     Grid.Row="1">
+                                <StackLayout Margin="0,0,0,10">
+                                    <Label Text="Donation Type"
+                                   TextColor="{StaticResource TextColor}"
+                                   FontFamily="{StaticResource FontSemiBold}"
+                                   FontSize="{StaticResource FontSize16}"/>
+                                    <pv:PancakeView BackgroundColor="{StaticResource EntryBgColor}"
+                                            Margin="0,0,0,10"
+                                            x:Name="donFrame"
+                                            HorizontalOptions="Fill"
+                                            HeightRequest="45">
+
+                                        <Controls:CustomPicker  x:Name="donation"
+                                                           Grid.Column="1" 
+                                                           TitleColor="{StaticResource PlaceholderColor}" 
+                                                           TextColor="{StaticResource TextColor}" 
+                                                           Title="Select donation"
+                                                           FontSize="{StaticResource FontSize16}"
+                                                           Margin="10,0,0,0"
+                                                            Image="ic_arrow_drop_down"
+                                                           FontFamily="{StaticResource FontMedium}">
+                                            <Controls:CustomPicker.Items>
+                                                <x:String>Sperm</x:String>
+                                                <x:String>Egg</x:String>
+                                            </Controls:CustomPicker.Items>
+                                        </Controls:CustomPicker>
+                                    </pv:PancakeView>
+                                </StackLayout>
+
+                                <StackLayout Margin="0,0,0,10">
+                                    <Label Text="D.O.B"
+                                   TextColor="{StaticResource TextColor}"
+                                   FontFamily="{StaticResource FontSemiBold}"
+                                   FontSize="{StaticResource FontSize16}"/>
+                                    <pv:PancakeView BackgroundColor="{StaticResource EntryBgColor}"
+                                            Margin="0,0,0,10"
+                                            x:Name="dobFrame"
+                                            HorizontalOptions="Fill"
+                                            HeightRequest="45">
+
+                                        <Controls:CustomDatePicker  x:Name="dob"
+                                                           Grid.Column="1" 
+                                                           PlaceholderColor="{StaticResource PlaceholderColor}" 
+                                                           TextColor="{StaticResource TextColor}" 
+                                                           Placeholder="date of birth" 
+                                                                    Format="D"
+                                                           FontSize="{StaticResource FontSize16}"
+                                                           Margin="10,0,0,0"
+                                                           FontFamily="{StaticResource FontMedium}"/>
+                                    </pv:PancakeView>
+                                </StackLayout>
+
+                                <StackLayout Margin="0,0,0,10">
+                                    <Label Text="Gender"
+                                   TextColor="{StaticResource TextColor}"
+                                   FontFamily="{StaticResource FontSemiBold}"
+                                   FontSize="{StaticResource FontSize16}"/>
+                                    <pv:PancakeView BackgroundColor="{StaticResource EntryBgColor}"
+                                            Margin="0,0,0,10"
+                                            x:Name="genFrame"
+                                            HorizontalOptions="Fill"
+                                            HeightRequest="45">
+
+                                        <Controls:CustomPicker  x:Name="gender"
+                                                           Grid.Column="1" 
+                                                           TitleColor="{StaticResource PlaceholderColor}" 
+                                                           TextColor="{StaticResource TextColor}" 
+                                                           Title="Select gender"
+                                                           FontSize="{StaticResource FontSize16}"
+                                                           Margin="10,0,0,0"
+                                                            Image="ic_arrow_drop_down"
+                                                           FontFamily="{StaticResource FontMedium}">
+                                            <Controls:CustomPicker.Items>
+                                                <x:String>Male</x:String>
+                                                <x:String>Female</x:String>
+                                            </Controls:CustomPicker.Items>
+                                        </Controls:CustomPicker>
+                                    </pv:PancakeView>
+                                </StackLayout>
+                                
+                                <StackLayout Margin="0,0,0,10">
+                                    <Label Text="Ethnicity"
+                                   TextColor="{StaticResource TextColor}"
+                                   FontFamily="{StaticResource FontSemiBold}"
+                                   FontSize="{StaticResource FontSize16}"/>
+                                    <pv:PancakeView BackgroundColor="{StaticResource EntryBgColor}"
+                                            Margin="0,0,0,10"
+                                            x:Name="ethFrame"
+                                            HorizontalOptions="Fill"
+                                            HeightRequest="45">
+
+                                        <Controls:CustomPicker  x:Name="ethnic"
+                                                           Grid.Column="1" 
+                                                           TitleColor="{StaticResource PlaceholderColor}" 
+                                                           TextColor="{StaticResource TextColor}" 
+                                                           Title="Select ethnicity"
+                                                           FontSize="{StaticResource FontSize16}"
+                                                           Margin="10,0,0,0"
+                                                            Image="ic_arrow_drop_down"
+                                                           FontFamily="{StaticResource FontMedium}">
+                                            <Controls:CustomPicker.Items>
+                                                <x:String>Black</x:String>
+                                                <x:String>White</x:String>
+                                            </Controls:CustomPicker.Items>
+                                        </Controls:CustomPicker>
+                                    </pv:PancakeView>
+                                </StackLayout>
+
+                                <StackLayout Margin="0,0,0,10">
+                                    <Label Text="Religion"
+                                   TextColor="{StaticResource TextColor}"
+                                   FontFamily="{StaticResource FontSemiBold}"
+                                   FontSize="{StaticResource FontSize16}"/>
+                                    <pv:PancakeView BackgroundColor="{StaticResource EntryBgColor}"
+                                            Margin="0,0,0,10"
+                                            x:Name="relFrame"
+                                            HorizontalOptions="Fill"
+                                            HeightRequest="45">
+
+                                        <Controls:CustomPicker  x:Name="religion"
+                                                           Grid.Column="1" 
+                                                           TitleColor="{StaticResource PlaceholderColor}" 
+                                                           TextColor="{StaticResource TextColor}" 
+                                                           Title="Select religion"
+                                                           FontSize="{StaticResource FontSize16}"
+                                                           Margin="10,0,0,0"
+                                                            Image="ic_arrow_drop_down"
+                                                           FontFamily="{StaticResource FontMedium}">
+                                            <Controls:CustomPicker.Items>
+                                                <x:String>Christianity</x:String>
+                                                <x:String>Islam</x:String>
+                                            </Controls:CustomPicker.Items>
+                                        </Controls:CustomPicker>
+                                    </pv:PancakeView>
+                                </StackLayout>
+                            </StackLayout>
+                        </ScrollView>
+                        
+                        <!--#region bottomView-->
+                        <Grid HorizontalOptions="FillAndExpand"
+                              Margin="20"
+                              Grid.Row="2"
+                              VerticalOptions="End">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Text="Back"
+                                    Grid.Column="0"
+                                    HorizontalOptions="FillAndExpand"
+                                    BackgroundColor="{StaticResource PrimaryColor}"
+                                    TextColor="{StaticResource WhiteColor}"
+                                    FontSize="{StaticResource FontSize16}"
+                                    FontFamily="{StaticResource FontSemiBold}"/>
+                            
+                            <Button Text="Continue"
+                                    Grid.Column="1"
+                                    HorizontalOptions="FillAndExpand"
+                                    BackgroundColor="{StaticResource PrimaryColor}"
+                                    TextColor="{StaticResource WhiteColor}"
+                                    FontSize="{StaticResource FontSize16}"
+                                    FontFamily="{StaticResource FontSemiBold}"/>
+                        </Grid>
+                        <!--#endregion bottom view-->
+                    </Grid>
+                </StackLayout>
+                <!--#endregion second view-->
+
+
+            </Grid>
+            <!--#endregion Reg view-->
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:ff1="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"             
+             x:Class="MedBarn.Views.Templates.ToolBarView"
+             x:Name="RootToolBar">
+    <ContentView.Content>
+        <StackLayout Margin="15,20,0,20" Orientation="Vertical" >
+            <Image
+                Source="back.png"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                Aspect="AspectFit"
+                BackgroundColor="Transparent"
+                WidthRequest="25"
+                HeightRequest="20">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Back"
+                                          NumberOfTapsRequired="1"/>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Label FontSize="{StaticResource FontSize20}"
+                   FontFamily="{StaticResource FontBold}"
+                    HorizontalOptions="Start"
+                   Margin="5,0,0,0"
+                    Text="{Binding Source={x:Reference RootToolBar}, Path=Title}"
+                    TextColor="{Binding Source={x:Reference RootToolBar}, Path=TitleColor}"
+                    VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

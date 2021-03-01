@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MedBarn.Styles.Fonts">
+
+    <!-- Font sizes  -->
+    <OnPlatform 
+        x:Key="FontRegular"
+        x:TypeArguments="x:String"
+        iOS="RalewayRegular"
+        Android="RalewayRegular.ttf#RalewayRegular" />
+
+    <OnPlatform 
+        x:Key="FontMedium"
+        x:TypeArguments="x:String"
+        iOS="RalewayMedium"
+        Android="RalewayMedium.ttf#RalewayMedium" />
+
+    <OnPlatform 
+        x:Key="FontBold"
+        x:TypeArguments="x:String"
+        iOS="RalewayBold"
+        Android="RalewayBold.ttf#RalewayBold" />
+    
+    <OnPlatform 
+        x:Key="FontSemiBold"
+        x:TypeArguments="x:String"
+        iOS="RalewaySemiBold"
+        Android="RalewaySemiBold.ttf#RalewaySemiBold" />
+    
+    <OnPlatform 
+        x:Key="FontItalic"
+        x:TypeArguments="x:String"
+        iOS="RalewayItalic"
+        Android="RalewayItalic.ttf#RalewayItalic" />
+    
+    <OnPlatform 
+        x:Key="FontLight"
+        x:TypeArguments="x:String"
+        iOS="RalewayLight"
+        Android="RalewayLight.ttf#RalewayLight" />
+
+</ResourceDictionary>

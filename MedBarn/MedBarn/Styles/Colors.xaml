@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MedBarn.Styles.Colors">
+    
+    <!-- Colors -->
+    <Color x:Key="WhiteColor">#FFFFFF</Color>
+    <Color x:Key="BlackColor">#000000</Color>
+    <Color x:Key="AltTextColor">#8B8B8B</Color>
+    <Color x:Key="PageBgColor">#F3F4FA</Color>
+    <Color x:Key="LoaderPageBgColor">#F3F4FA</Color>
+    <Color x:Key="PlaceholderColor">#C4C4C4</Color>
+    <Color x:Key="TextColor">#5F5D5D</Color>
+    <Color x:Key="EntryBgColor">#FAFCF0</Color>
+    <Color x:Key="SubTextColor">#939393</Color>
+    <Color x:Key="DisableColor">#20465E82</Color>
+    <Color x:Key="InActiveColor">#E4E4E4</Color>
+    <Color x:Key="SideNavBgColor">#952C3A50</Color>
+    <Color x:Key="PrimaryColor">#C1D05B</Color>
+    <Color x:Key="AltPrimaryColor">#70C1D05B</Color>
+    <Color x:Key="CardBtnColor">#407BC30A</Color>
+    <Color x:Key="AcctTxtColor">#702C3A50</Color>
+    <Color x:Key="MenuBgColor">#107BC30A</Color>
+    <Color x:Key="AccentColor">#465E82</Color>
+    <Color x:Key="UnselectedColor">#BFC3B9</Color>
+    <Color x:Key="FrameBorderColor">#202C3A50</Color>
+    <Color x:Key="BgColor">#E7E0E7</Color>
+    <Color x:Key="LineColor">#E5E5E5</Color>
+    <Color x:Key="AltColor">#856A7AFB</Color>
+    <Color x:Key="AltBtnColor">#F9D050</Color>
+    <Color x:Key="RedShadeColor">#FF9B72</Color>
+    <Color x:Key="GreenColor">#69DD56</Color>
+    <Color x:Key="DarkGreenColor">#1D8C2E</Color>
+    <Color x:Key="LightRedColor">#FF9678</Color>
+    <Color x:Key="StaticFrameColor">#F5F0FC</Color>
+    <Color x:Key="FixedFrameColor">#DED8E5</Color>
+    <Color x:Key="LightGreenColor">#93CCAB</Color>
+
+</ResourceDictionary>
